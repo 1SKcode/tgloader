@@ -1,0 +1,24 @@
+download_this:
+  # Channel by ID with date range
+  -1001234567890:
+    from: "2025-04-01"    # OLDEST | NOW | YYYY-MM-DD | NOW-5D | NOW-1H | NOW-30m
+    to: "2025-06-01"      # NOW | YYYY-MM-DD | NOW-5D | NOW-1H | NOW-30m
+    print_content: false  # Whether to print message content (default: true)
+  
+  # Channel with message ID range
+  -1001234567891:
+    from: "1000"          # Message ID (numbers are treated as message IDs)
+    to: "1030"            # Message ID
+    print_content: false
+  
+  # Channel with relative dates
+  "@example_channel":
+    from: "NOW-7D"        # 7 days ago
+    to: "NOW-1D"          # 1 day ago
+    print_content: true
+  
+  # Recent messages only
+  "@username":
+    from: "NOW-6H"        # 6 hours ago
+    to: "NOW"             # now
+    print_content: false 
